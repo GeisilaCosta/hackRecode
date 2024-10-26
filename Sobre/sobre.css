@@ -1,9 +1,15 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
 body {
     font-family:  Roboto, sans-serif; 
-    background-color: #9fbab1;
+    background-color: #d9dedc;
     margin: 0;
-    padding: 20px;
+    
 }
 
 .main-sobre {
@@ -37,12 +43,6 @@ img{
     margin-bottom: 8px; 
     border-radius: 50%;
 }
-/* .paragrafo-sobre img {
-    height: auto; 
-    width: 80px;
-    margin-bottom: 8px; 
-    border-radius: 50%;
-} */
 
 h3 {
     margin: 15px 0; 
