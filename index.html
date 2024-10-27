@@ -25,7 +25,6 @@
       </nav>
     </aside>
     
-
     <!-- Cabeçalho da página -->
     <header class="header">
       <div class="background-image"></div>
@@ -72,6 +71,7 @@
       </header>
     </header>
 
+
     <!-- Scripts para abrir e fechar o player de áudio -->
     <script>
       function abrirPlayer(buttonElement) {
@@ -90,8 +90,15 @@
         audioContainer.style.display = "none";
         document.getElementById("botton").style.animation = "pulse 2s infinite";
       }
+
+
+      function callEmergency() {
+        const emergencyNumber = "193"; // Número dos Bombeiros no Brasil
+        window.location.href = `tel:${emergencyNumber}`;
+        alert("Chamando os Bombeiros...");
+      }
+      
     </script>
-   
-  
   </body>
 </html>
+
