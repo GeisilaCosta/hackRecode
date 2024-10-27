@@ -7,73 +7,87 @@
     <title>Ong - Vida Segura</title>
   </head>
   <body>
+    <!-- Menu Lateral para Navegação Rápida -->
+    <aside class="side-menu">
+      <nav>
+        <h2 class="menu-title">Menu</h2>
+        <ul>
+          <li><a href="#prevencao">Prevenção</a></li>
+          <li><a href="#durante">Durante a Enchente</a></li>
+          <li><a href="#apos">Depois da Enchente</a></li>
+          <li><a href="#impactos">Impactos e Problemas</a></li>
+          <li><a href="#solucoes">Soluções e Mitigação</a></li>
+          <li><a href="#mapas">Mapa de Zonas de Risco</a></li>
+          <li><a href="#emergencia">Contatos de Emergência</a></li>
+          <li><a href="#monitoramento">Monitoramento em Tempo Real</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+
+    <!-- Cabeçalho da página -->
     <header class="header">
-    <div class="background-image"></div>
-   <header style="background-image: url('../img/Background1.jpg');"> 
-    <header class="header-bacground">
-      <div class="container">
-        <!--Menu-->
-        <nav>
-          <a href="index.html">
-            <img src="../img/Logo-VidaS.png" alt="Logo do Site" class="logo" />
-          </a>
-          <ul class="ul">
-            <a href="./index.html">HOME</a>
-            <a href="../Sobre/sobre.html">SOBRE</a>
-            <a href="../Home/forum.html">FÓRUM</a>
-            <a href="../Home/mapas.html">MAPAS</a>
-            <a href="../Home/links_uteis.html">LINKS ÚTEIS</a>
-          </ul>
-        </nav>
-        <!--end Menu-->
-        <section class="banner">
-          <div class="text_banner">
-            <h1>Informações Sobre Enchentes - RS</h1>
-            <p>Informação que salva vidas: Antecipa-se aos desastres</p>
-            <!-- Player de Áudio com título e botão de fechar -->
-            <button onclick="abrirPlayer(this)" class="botton" id="botton">
-              Clique-Ouça
-            </button>
-            <div id="audioContainer" style="display: none">
-              <p id="podcastAssunto">
-                Assunto: Como se preparar para enchentes
-              </p>
-              <audio id="player" controls>
-                <source src="/AUDIOS/part1.mp3" type="audio/mpeg" />
-                Seu navegador não suporta o elemento de áudio.
-              </audio>
-              <button onclick="fecharPlayer()" id="close-button">Fechar</button>
+      <div class="background-image"></div>
+      <header style="background-image: url('../img/Background1.jpg');">
+        <div class="container">
+          <!-- Menu Superior -->
+          <nav class="top-nav">
+            <a href="index.html">
+              <img src="../img/Logo-VidaS.png" alt="Logo do Site" class="logo" />
+            </a>
+            <ul class="ul">
+              <a href="./index.html">HOME</a>
+              <a href="../Sobre/sobre.html">SOBRE</a>
+              <a href="../Home/forum.html">FÓRUM</a>
+              <a href="../Home/mapas.html">MAPAS</a>
+              <a href="../Home/links_uteis.html">LINKS ÚTEIS</a>
+            </ul>
+          </nav>
+          <!-- Fim do Menu Superior -->
+
+          <!-- Banner Principal -->
+          <section class="banner">
+            <div class="text_banner">
+              <h1>Informações Sobre Enchentes - RS</h1>
+              <p>Informação que salva vidas: Antecipe-se aos desastres</p>
+              <!-- Botão de áudio -->
+              <button onclick="abrirPlayer(this)" class="botton" id="botton">
+                Clique-Ouça
+              </button>
+              <div id="audioContainer" style="display: none">
+                <p id="podcastAssunto">Assunto: Como se preparar para enchentes</p>
+                <audio id="player" controls>
+                  <source src="/AUDIOS/part1.mp3" type="audio/mpeg" />
+                  Seu navegador não suporta o elemento de áudio.
+                </audio>
+                <button onclick="fecharPlayer()" id="close-button">Fechar</button>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      </header>
     </header>
+
+    <!-- Scripts para abrir e fechar o player de áudio -->
     <script>
       function abrirPlayer(buttonElement) {
         let audioContainer = document.getElementById("audioContainer");
         let player = document.getElementById("player");
-        let podcastAssunto = document.getElementById("podcastAssunto");
-
-        audioContainer.style.display = "block"; // Exibe o container de áudio
-        podcastAssunto.style.display = "block"; // Exibe o assunto do podcast
-        player.play(); // Reproduz automaticamente
-
-        // Para a animação do botão ao clicar
+        audioContainer.style.display = "block";
+        player.play();
         buttonElement.style.animation = "none";
       }
 
       function fecharPlayer() {
         let audioContainer = document.getElementById("audioContainer");
         let player = document.getElementById("player");
-        let botton = document.getElementById("botton"); // Seleciona o botão original
-
-        player.pause(); // Pausa a reprodução
-        player.currentTime = 0; // Reinicia o áudio para o início
-        audioContainer.style.display = "none"; // Oculta o container de áudio
-
-        // Restaura a animação do botão ao fechar o player
-        botton.style.animation = "pulse 2s infinite";
+        player.pause();
+        player.currentTime = 0;
+        audioContainer.style.display = "none";
+        document.getElementById("botton").style.animation = "pulse 2s infinite";
       }
     </script>
+   
+  
   </body>
 </html>
