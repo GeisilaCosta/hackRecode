@@ -19,7 +19,7 @@
           <li><a href="/pages/solucoes">Soluções e Mitigação</a></li>
           <li><a href="/pages/mapas.html">Mapa de Zonas de Risco</a></li>
           <li><a href="/pages/recursos.html">Contatos de Emergência</a></li>
-          <li><a href="#monitoramento">Monitoramento em Tempo Real</a></li>
+          <li><a href="/monitoramento/index.html">Monitoramento em Tempo Real</a></li>
         </ul>
       </nav>
       <button class="sos-button" onclick="callEmergency()">SOS Emergência</button>
@@ -41,7 +41,7 @@
               <a href="../Sobre/sobre.html">SOBRE</a>
               <a href="../Home/forum.html">FÓRUM</a>
               <a href="../Home/mapas.html">MAPAS</a>
-              <a href="../Home/links_uteis.html">LINKS ÚTEIS</a>
+              <a href="/pages/recursos.html">LINKS ÚTEIS</a>
             </ul>
           
           </nav>
@@ -89,6 +89,14 @@
         audioContainer.style.display = "none";
         document.getElementById("botton").style.animation = "pulse 2s infinite";
       }
+
+      
+      function callEmergency() {
+    const emergencyNumber = "193"; // Número dos Bombeiros no Brasil
+    window.location.href = `tel:${emergencyNumber}`;
+    alert("Chamando os Bombeiros...");
+  }
+  
     </script>
    
   
