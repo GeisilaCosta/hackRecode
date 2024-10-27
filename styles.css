@@ -35,8 +35,8 @@ body{
 nav{
     display: flex; /*Deixa os itens do menu um do lado do outro*/    
     padding-top: 25px;
-    justify-content: space-around;
     justify-content: space-between;
+    overflow: auto;
 }
 nav ul{
     display: flex;
@@ -161,7 +161,7 @@ p{
     margin: 0px;
     font-size: 1.5em;
     font-weight: bold;
-    color: #ff6347; 
+    color: #40685a; 
     text-align: center;
     padding-bottom: 5px; 
    
@@ -189,7 +189,7 @@ p{
   }
   
   .side-menu nav ul li a:hover {
-    color: #ff6347; 
+    color: #40685a; 
   }
   
   /* Ajuste do conteúdo principal ao lado do menu */

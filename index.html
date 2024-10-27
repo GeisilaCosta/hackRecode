@@ -9,9 +9,9 @@
   <body>
     <!-- Menu Lateral para Navegação Rápida -->
     <aside class="side-menu">
-      <nav>
-        <h2 class="menu-title">Menu</h2>
+      <nav> 
         <ul>
+
           <li><a href="/pages/prevencao.html">Prevenção</a></li>
           <li><a href="/pages/durante.html">O que fazer Durante a Enchente</a></li>
           <li><a href="/pages/depois.html">O que Fazer Depois da Enchente</a></li>
@@ -21,27 +21,36 @@
           <li><a href="/pages/recursos.html">Contatos de Emergência Locais </a></li>
           <li><a href="/monitoramento/index.html">Monitoramento em Tempo Real</a></li>
           <li><a href="/pages/dicas.html">Dicas</a></li>
+          <h2 class="menu-title">Menu</h2>
+          <li><a href="#prevencao">Prevenção</a></li>
+          <li><a href="#durante">Durante a Enchente</a></li>
+          <li><a href="#apos">Depois da Enchente</a></li>
+          <li><a href="#impactos">Impactos e Problemas</a></li>
+          <li><a href="#solucoes">Soluções e Mitigação</a></li>
+          <li><a href="#mapas">Mapa de Zonas de Risco</a></li>
+          <li><a href="#emergencia">Contatos de Emergência</a></li>
+          <li><a href="#monitoramento">Monitoramento em Tempo Real</a><
         </ul>
       </nav>
-      <button class="sos-button" onclick="callEmergency()">SOS Emergência</button>
     </aside>
     
     <!-- Cabeçalho da página -->
     <header class="header">
       <div class="background-image"></div>
-      <header style="background-image: url('../img/Background1.jpg');">
+      <header style="background-image: url('./img/Background1.jpg');">
         <div class="container">
           <!-- Menu Superior -->
           <nav class="top-nav">
             <a href="index.html">
-              <img src="../img/Logo-VidaS.png" alt="Logo do Site" class="logo" />
+              <img src="./img/Logo-VidaS.png" alt="Logo do Site" class="logo" />
             </a>
             <ul class="ul">
-              <a href="/index.html">HOME</a>
-              <a href="../Sobre/sobre.html">SOBRE</a>
-              <a href="../Home/forum.html">FÓRUM</a>
-              <a href="/pages/mapas.html">MAPAS</a>
-              <a href="/pages/recursos.html">LINKS ÚTEIS</a>
+              <a href="./index.html">HOME</a>
+              <a href="./Sobre/sobre.html">SOBRE</a>
+              <a href="./Viws/forum.html">FÓRUM</a>
+              <a href="./Viws/mapas.html">MAPAS</a>
+              <a href="./Viws/links_uteis.html">LINKS ÚTEIS</a>
+              <a href="./Viws/emergencia.html">CONTATOS DE EMERGÊNCIA</a>
             </ul>
           </nav>
           <!-- Fim do Menu Superior -->
@@ -59,7 +68,10 @@
                 <p id="podcastAssunto">Assunto: Como se preparar para enchentes</p>
                 <audio id="player" controls>
                   <source src="/AUDIOS/part1.mp3" type="audio/mpeg" />
-                  Seu navegador não suporta os elementos de áudio.
+
+
+                  Seu navegador não suporta os elemento de áudio.
+
                 </audio>
                 <button onclick="fecharPlayer()" id="close-button">Fechar</button>
               </div>
@@ -69,7 +81,6 @@
       </header>
     </header>
 
-   
 
     <!-- Scripts para abrir e fechar o player de áudio -->
     <script>
@@ -90,11 +101,13 @@
         document.getElementById("botton").style.animation = "pulse 2s infinite";
       }
 
+
       function callEmergency() {
         const emergencyNumber = "193"; // Número dos Bombeiros no Brasil
         window.location.href = `tel:${emergencyNumber}`;
         alert("Chamando os Bombeiros...");
       }
+      
     </script>
   </body>
 </html>
