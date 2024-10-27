@@ -26,7 +26,6 @@
       <button class="sos-button" onclick="callEmergency()">SOS Emergência</button>
     </aside>
     
-
     <!-- Cabeçalho da página -->
     <header class="header">
       <div class="background-image"></div>
@@ -44,7 +43,6 @@
               <a href="/pages/mapas.html">MAPAS</a>
               <a href="/pages/recursos.html">LINKS ÚTEIS</a>
             </ul>
-          
           </nav>
           <!-- Fim do Menu Superior -->
 
@@ -71,6 +69,7 @@
       </header>
     </header>
 
+   
 
     <!-- Scripts para abrir e fechar o player de áudio -->
     <script>
@@ -91,15 +90,12 @@
         document.getElementById("botton").style.animation = "pulse 2s infinite";
       }
 
-      
       function callEmergency() {
-    const emergencyNumber = "193"; // Número dos Bombeiros no Brasil
-    window.location.href = `tel:${emergencyNumber}`;
-    alert("Chamando os Bombeiros...");
-  }
-  
+        const emergencyNumber = "193"; // Número dos Bombeiros no Brasil
+        window.location.href = `tel:${emergencyNumber}`;
+        alert("Chamando os Bombeiros...");
+      }
     </script>
-   
-  
   </body>
 </html>
+
