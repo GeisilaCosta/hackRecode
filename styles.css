@@ -126,6 +126,21 @@ p{
     margin-bottom: 3px;
 }
 
+.sos-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FF4C4C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sos-button:hover {
+  background-color: #ff3333;
+}
 /* Menu Lateral */
 
 .side-menu {
